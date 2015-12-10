@@ -1,0 +1,18 @@
+fi:
+  buttons:
+    login: 'Kirjaudu sisään'
+    create_account: 'Luo käyttäjätili'
+    save_account: 'Tallenna käyttäjätili'
+    change_password: 'Vaihda salasana'
+  links:
+    forgot_password: 'Unohditko salasanasi?'
+    home: 'Etusivu'
+    login: 'Kirjaudu sisään'
+    logout: 'Kirjaudu ulos'
+    my_account: 'Oma käyttäjätili'
+    create_account: 'Luo käyttäjätili'
+  titles:
+    login: 'Sisäänkirjautuminen'
+    create_account: 'Uusi käyttäjätili'
+    my_account: 'Oma käyttäjätili'
+    change_password: 'Vaihda salasana'

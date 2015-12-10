@@ -1,0 +1,8 @@
+fi:
+  routes:
+    login: '/kirjaudu'
+    logout: '/poistu'
+    new_account: '/tili/uusi'
+    my_account: '/tili'
+    confirmation: '/vahvista'
+    change_password: '/salasana'

@@ -1,0 +1,18 @@
+en:
+  buttons:
+    login: 'Login'
+    create_account: 'Create Account'
+    save_account: 'Save Account'
+    change_password: 'Change Password'
+  links:
+    forgot_password: 'Forgot your password?'
+    home: 'Home'
+    login: 'Login'
+    logout: 'Logout'
+    my_account: 'My Account'
+    create_account: 'Create Account'
+  titles:
+    login: 'Login'
+    create_account: 'Create Account'
+    my_account: 'My Account'
+    change_password: 'Change Password'

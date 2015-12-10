@@ -1,0 +1,9 @@
+fi:
+  activerecord:
+    attributes:
+      user:
+        email: 'Sähköpostiosoite'
+        password: 'Salasana'
+        password_confirmation: 'Salasana uudelleen'
+        current_password: 'Nykyinen salasanasi'
+        remember_me: 'Muista minut'

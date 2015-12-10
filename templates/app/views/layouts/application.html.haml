@@ -1,0 +1,39 @@
+!!!
+%html{lang: I18n.locale}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{'http-equiv': 'x-ua-compatible', content: 'ie=edge'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1'}
+    %title= (@title.blank? ? '' : "#{@title} | ") + application_name
+    = stylesheet_link_tag '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'
+    = stylesheet_link_tag 'application'
+    = csrf_meta_tags
+  %body
+    %header
+      %div
+        - if current_page?(root_path)
+          %h1= application_name
+        - else
+          %a{href: root_path}= application_name
+        %nav
+          %ul
+            %li= link_to(t('links.home'), root_path)
+        %nav
+          %ul
+            - if user_signed_in?
+              %li= link_to(t('links.my_account'), edit_user_registration_path)
+              %li= link_to(t('links.logout'), destroy_user_session_path, 
+                method: :delete)
+            - else
+              %li= link_to(t('links.login'), new_user_session_path)
+              %li= link_to(t('links.create_account'), new_user_registration_path)
+    %main
+      - flash.each do |name, msg|
+        %div{class: "flash #{name}"}
+          %div.container
+            %p= msg
+      = yield
+    %footer
+      %div
+        = "&copy; #{Time.now.year} #{application_name}".html_safe
+    = javascript_include_tag 'application'

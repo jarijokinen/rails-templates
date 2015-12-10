@@ -1,0 +1,8 @@
+en:
+  routes:
+    login: '/login'
+    logout: '/logout'
+    new_account: '/account/new'
+    my_account: '/account'
+    confirmation: '/confirm'
+    change_password: '/password'
