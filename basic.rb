@@ -96,7 +96,6 @@ directory 'templates/config/locales', 'config/locales'
 # Remove unnecessary files
 
 remove_file 'lib/templates/erb/scaffold/_form.html.erb'
-remove_file 'README.rdoc'
 
 # Initial commit
 
