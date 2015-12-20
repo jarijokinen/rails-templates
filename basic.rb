@@ -8,6 +8,10 @@ remove_file 'Gemfile'
 copy_file 'templates/Gemfile', 'Gemfile'
 run 'bundle install --without production'
 
+# Spring
+
+run 'bundle exec spring binstub --all'
+
 # Formtastic
 
 generate 'formtastic:install'
