@@ -7,8 +7,8 @@
     = semantic_form_for(resource, as: resource_name, url: form_path) do |f|
       = f.inputs do
         = f.input :email, input_html: { autofocus: true }, required: false
-        = f.input :password, input_html: { autocomplete: 'off' }, 
-          required: false
+        = f.input :password, as: :password, 
+          input_html: { autocomplete: 'off' }, required: false
         - if devise_mapping.rememberable?
           = f.input :remember_me, as: :boolean
       = f.actions do

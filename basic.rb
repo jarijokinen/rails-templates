@@ -8,10 +8,6 @@ remove_file 'Gemfile'
 copy_file 'templates/Gemfile', 'Gemfile'
 run 'bundle install --without production'
 
-# Spring
-
-run 'bundle exec spring binstub --all'
-
 # Formtastic
 
 generate 'formtastic:install'
@@ -66,10 +62,6 @@ copy_file 'templates/app/helpers/application_helper.rb',
 remove_file 'app/views/layouts/application.html.erb'
 copy_file 'templates/app/views/layouts/application.html.haml', 
   'app/views/layouts/application.html.haml'
-copy_file 'templates/app/views/layouts/mailer.html.erb', 
-  'app/views/layouts/mailer.html.erb'
-copy_file 'templates/app/views/layouts/mailer.text.erb', 
-  'app/views/layouts/mailer.text.erb'
 
 # Routes
 
@@ -100,6 +92,10 @@ directory 'templates/config/locales', 'config/locales'
 # Remove unnecessary files
 
 remove_file 'lib/templates/erb/scaffold/_form.html.erb'
+
+# Spring
+
+run 'bundle exec spring binstub --all'
 
 # Initial commit
 

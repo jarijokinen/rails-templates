@@ -8,9 +8,10 @@
       html: { method: :put} ) do |f|
       = f.inputs do
         = f.input :reset_password_token, as: :hidden
-        = f.input :password, input_html: { autofocus: true, 
+        = f.input :password, as: :password, input_html: { autofocus: true, 
           autocomplete: 'off' }, required: false
-        = f.input :password_confirmation, input_html: { autocomplete: 'off' }, 
+        = f.input :password_confirmation, as: :password,
+          input_html: { autocomplete: 'off' }, 
           required: false
       = f.actions do
         = f.action :submit, label: t('buttons.change_password')
